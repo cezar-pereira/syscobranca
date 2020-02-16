@@ -37,7 +37,7 @@
             <input type="tel" class="form-control" value="{{ old('phone') ? old('phone') : $user->phone }}" name="phone" id="phone" maxlength="15" name="phone" required="required">
         </div>
     </div>
-    <button class="btn btn-primary" type="button" onclick="validation()">Editar usuário</button>
+    <button class="btn btn-primary" type="button" onclick="validateUser()">Editar usuário</button>
 </form>
 
 @endsection

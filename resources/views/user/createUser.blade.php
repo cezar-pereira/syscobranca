@@ -42,7 +42,7 @@
             <input type="text" class="form-control" placeholder="contato" name="phone" id="phone" name="phone" required="required" value="{{ old('phone') }}">
         </div>
     </div>
-    <button class="btn btn-primary" type="button" onclick="validation()" >Cadastrar</button>
+    <button class="btn btn-primary" type="button" onclick="validateUser()" >Cadastrar</button>
 </form>
 
 @endsection

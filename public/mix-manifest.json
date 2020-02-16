@@ -2,5 +2,7 @@
     "/site/bootstrap.css": "/site/bootstrap.css?id=988cf52a189076f486b6",
     "/site/jquery.js": "/site/jquery.js?id=11c05eb286ed576526bf",
     "/site/bootstrap.js": "/site/bootstrap.js?id=1a94abb2d5270a12fa1f",
-    "/site/validations/createEditUser.js": "/site/validations/createEditUser.js?id=d41d8cd98f00b204e980"
+    "/site/validations/createEditUser.js": "/site/validations/createEditUser.js?id=63abf93e872572f4134d",
+    "/site/validations/createSms.js": "/site/validations/createSms.js?id=d41d8cd98f00b204e980",
+    "/site/validations/createEditPaymentSlip.js": "/site/validations/createEditPaymentSlip.js?id=d41d8cd98f00b204e980"
 }

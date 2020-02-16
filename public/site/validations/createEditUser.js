@@ -29,7 +29,7 @@ function validatorPhone() {
     }
 }
 
-function validation() {
+function validateUser() {
     if (validatorName() && validatorCpf() && validatorPhone())
         $("#formUser").submit();
 }

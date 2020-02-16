@@ -107,6 +107,8 @@
   <script src="{{ asset('site/jquery.js') }}"></script>
   <script src="{{ asset('site/bootstrap.js') }}"></script>
   <script src="{{ mix('site/validations/createEditUser.js') }}"></script>
+  <script src="{{ mix('site/validations/createSms.js') }}"></script>
+  <script src="{{ mix('site/validations/createEditPaymentSlip.js') }}"></script>
 
 </body>
 
