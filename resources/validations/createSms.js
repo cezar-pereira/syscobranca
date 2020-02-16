@@ -14,7 +14,7 @@ function validatorMessage() {
         $("#errorValidationFront").text("Mensagem não pode ser nula").addClass("alert alert-danger");
         return false;
     } else if (message > 160) {
-        $("#errorValidationFront").text("Mensagem não pode ter mais de 160 caracteres inválido").addClass("alert alert-danger");
+        $("#errorValidationFront").text("Mensagem não pode ter mais de 160 caracteres").addClass("alert alert-danger");
         return false
     }
     else
