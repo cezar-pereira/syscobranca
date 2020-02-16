@@ -33,13 +33,13 @@
     <div class="form-group row">
         <label for="inputPassword" class="col-sm-2 col-form-label">CPF</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" placeholder="CPF" name="cpf" id="cpf" required="required" value="{{ old('cpf') }}">
+            <input type="number" class="form-control" placeholder="CPF" name="cpf" id="cpf" required="required" value="{{ old('cpf') }}">
         </div>
     </div>
     <div class="form-group row">
         <label for="inputPassword" class="col-sm-2 col-form-label">Contato</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" placeholder="contato" name="phone" id="phone" name="phone" required="required" value="{{ old('phone') }}">
+            <input type="number" class="form-control" placeholder="contato" name="phone" id="phone" name="phone" required="required" value="{{ old('phone') }}">
         </div>
     </div>
     <button class="btn btn-primary" type="button" onclick="validateUser()" >Cadastrar</button>
