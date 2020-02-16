@@ -6,9 +6,7 @@ use App\Http\Requests\StoreUpdateUserRequest;
 use App\Models\PaymentSlip;
 use App\Models\Sms;
 use App\Models\User;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
-use Mockery\Matcher\Pattern;
 
 class UserController extends Controller
 {
