@@ -15,7 +15,6 @@
 @endif
 
 <div id="errorValidationFront">
-
 </div>
 
 @if (session('success'))
