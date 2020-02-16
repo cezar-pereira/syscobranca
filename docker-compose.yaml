@@ -1,0 +1,52 @@
+version: '3'
+
+services:
+  laravel-docker:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/usr/share/nginx
+    networks:
+      - app-network
+      
+  # mysql-app:
+  #   image: mysql:5.7.28
+  #   ports:
+  #     - "3306:3306"
+  #   volumes:
+  #     - .docker/dbdata/mysql:/var/lib/mysql
+  #   environment:
+  #     MYSQL_DATABASE: laravel
+  #     MYSQL_ROOT_PASSWORD: laravel
+  #   networks:
+  #     - app-network
+  
+  postgres-app:
+    image: postgres
+    ports:
+      - "15432:5432"
+    volumes:
+      - .docker/dbdata/postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: cezarpostgres
+      POSTGRES_USER: cezarpostgres
+      POSTGRES_DB: laravelpostgres
+    networks:
+      - app-network
+
+  pgadmin-app:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "syscobranca@syscobranca.com.br"
+      PGADMIN_DEFAULT_PASSWORD: "syscobranca"
+    ports:
+      - "16543:80"
+    depends_on:
+      - postgres-app
+    networks:
+      - app-network    
+      
+networks:
+  app-network:
+    driver: bridge    
