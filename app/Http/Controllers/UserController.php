@@ -76,7 +76,7 @@ class UserController extends Controller
     public function sms(User $user)
     {
         if ($data = $user->sms()->paginate($this->itemsPerPage))
-            return view('listAllSms', ['smss' => $data]);
+            return view('sms.listAllSms', ['smss' => $data]);
     }
 
     public function paymentSlip(User $user)

@@ -11,19 +11,22 @@
 |
 */
 
-Route::get('/', 'UserController@index');
+Route::get('/', 'AuthController@login');
+Route::get('/logout', 'AuthController@logout')->name('logout');
+Route::post('/login/do', 'AuthController@loginDo')->name('login.do');
+Route::get('/login', 'AuthController@showLoginForm')->name('loginForm');
+Route::group(['middleware' => 'auth:admin'], function () {
+    Route::resource('user', 'UserController');
+    // Route::get('user/{user}/sms', 'UserController@sms'); //sem uso
+    // Route::get('user/{user}/paymentslip', 'UserController@paymentSlip'); //sem uso
 
+    Route::resource('sms', 'SmsController')->except([
+        'edit', 'update', 'destroy', 'show'
+    ]);
+    // Route::get('sms/{id}/user', 'SmsController@user'); //sem uso
+    Route::get('sms/{user}/create', 'SmsController@createWithUser')->name('sms.user.create');
 
-Route::resource('user', 'UserController');
-Route::get('user/{user}/sms', 'UserController@sms');
-Route::get('user/{user}/paymentslip', 'UserController@paymentSlip');
-
-Route::resource('sms', 'SmsController')->except([
-    'edit', 'update', 'destroy', 'show'
-]);
-Route::get('sms/{id}/user', 'SmsController@user');
-Route::get('sms/{user}/create', 'SmsController@createWithUser')->name('sms.user.create');
-
-Route::resource('paymentslip', 'PaymentSlipController')->except([
-    'show'
-]);
+    Route::resource('paymentslip', 'PaymentSlipController')->except([
+        'show'
+    ]);
+});
