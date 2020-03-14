@@ -1,21 +1,19 @@
 # Projeto
-
-Idéia de criar um sistema de cobrança por sms, onde será cadastrado os clientes para ser eviada uma mensagem.
+<p>Idéia de criar um sistema de cobrança por sms, onde será cadastrado os clientes para ser eviada uma mensagem.</p>
 
 ## Funções
-Cadastrar clientes;
-Cadastrar boletos bancários;
-Enviar sms.
+<p>Cadastrar clientes;</p>
+<p>Cadastrar boletos bancários;</p>
+<p>Enviar sms.</p>
 
 ## Ferramentas utilizadas
-Back-end: Laravel;
-Front-end: Bootstrap;
-Banco de dados: PostgreSQL;
-Validação front-end: Jquery
-Validação back-end: FormRequest do próprio laravel.
-
+<p>Back-end: Laravel;</p>
+<p>Front-end: Bootstrap;</p>
+<p>Banco de dados: PostgreSQL;</p>
+<p>Validação front-end: Jquery</p>
+<p>Validação back-end: FormRequest do próprio laravel.</p>
 
 
 #### Autenticação
-Usuário: admin
-Senha: admin
+<p>Usuário: admin</p>
+<p>Senha: admin</p>
